@@ -1,27 +1,26 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-  type Tech {
+  type Patient {
     _id: ID!
     name: String!
   }
 
-  type Matchup {
+  type Medication {
     _id: ID!
-    tech1: String!
-    tech2: String!
-    tech1_votes: Int
-    tech2_votes: Int
+    Drug_A
+    Drug_B
+    Drug_C
   }
 
   type Query {
-    tech: [Tech]
-    matchups(_id: String): [Matchup]
+    XXXX: [XXXX]
+   _____s(_id: String): [Medication]
   }
 
   type Mutation {
-    createMatchup(tech1: String!, tech2: String!): Matchup
-    createVote(_id: String!, techNum: Int!): Matchup
+    create____(XXXX1: String!, XXXX2: String!):_____
+    create(_id: String!, XXXXNum: Int!):_____
   }
 `;
 

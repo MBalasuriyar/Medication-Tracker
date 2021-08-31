@@ -1,14 +1,23 @@
 const { Schema, model } = require('mongoose');
 
-const PatientSchema = new Schema({
-  patient1: {
-    type: String,
-    id:1 ,
-  },
+const MedicationSchema = new Schema({
+    name: {
+        type: String,
 
-  Medication:[]
+    },
+    brandName: {
+        type: String
+    },
+    drugType: {
+        type: String
+    },
+    datePerscribed: {
+        type: Date
+    }
+
+
 });
 
-const Perscription = model('Perscription', PerscriptionSchema);
+const Medication = model('Medication', MedicationSchema);
 
-module.exports = Perscription;
+module.exports = Medication;

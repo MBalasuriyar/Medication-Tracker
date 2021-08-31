@@ -7,11 +7,17 @@ const PatientSchema = new Schema({
     required: true,
     unique: true,
   },
-  medications :[
+  medications: [
+    Drug: {
+      name: {
+        type: String
+      }
+    }
+
 
   ]
 
-  
+
 });
 
 const Patient = model('Patient', PatientSchema);
